@@ -28,7 +28,7 @@ Update later
 NOTE: document key: * means field is REQUIRED. All else is optional.
 
 1. GET
-''' /listings/:Id/photos'''
+`/listings/:Id/photos`
 Fetch all photos for listings with specified listing ID from database
 ''' 
 INPUT: JSON data type
