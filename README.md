@@ -36,7 +36,7 @@ OUTPUT: JSON data type, array of objects
   [
     {
      _id: Number
-     Photo: Url String,
+     Photo: String,
      Caption: String
     }, {...}
   ]
@@ -46,18 +46,16 @@ OUTPUT: JSON data type, array of objects
 
 `/listings/:Id/photos`
 Add photo to photos collection/table and reference to photos array for current listing ID into database. 
-Can only add one photo at a time. Refactor in the future for multiple photos in future versions if need be.
-Listing Id is not needed in the input because the path is already telling server which specific LOCATION in databse to add to.
+Can only add one photo at a time. 
 
 ``` 
 INPUT: JSON data type
   {
-   Photo: Url String *,
+   Photo: String *,
    Caption: String
   }
   
 OUTPUT: `Status code 200` or `Error message`
-  
 ```
 
 3. PUT:
@@ -69,8 +67,8 @@ Update photo with this photo Id within current listing to another reference numb
 INPUT: JSON data type
   {
    photo_id: Number *, 
-   newURL: URL string *
-   caption: string
+   newURL: String *,
+   caption: String
   }
 
 OUTPUT: `Status code 200` or `Error message`
@@ -88,5 +86,4 @@ INPUT:
   }
 
 OUTPUT: `Status code 200` or `Error message`
-
 ```
