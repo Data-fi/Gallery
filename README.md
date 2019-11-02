@@ -80,7 +80,7 @@ OUTPUT: Status code 200 or "Error message"
 Delete photo with this Id REFERENCE in this specific listing. Leave original photo in tact. 
 
 ```
-INPUT:
+INPUT: JSON data type
   {
    photo_id: Number *
   }
