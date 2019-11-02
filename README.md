@@ -55,7 +55,7 @@ INPUT: JSON data type
    Caption: String
   }
   
-OUTPUT: `Status code 200` or `Error message`
+OUTPUT: Status code 200 or "Error message"
 ```
 
 3. PUT:
@@ -71,7 +71,7 @@ INPUT: JSON data type
    caption: String
   }
 
-OUTPUT: `Status code 200` or `Error message`
+OUTPUT: Status code 200 or "Error message"
 ```
 
 4. DELETE: 
@@ -85,5 +85,5 @@ INPUT:
    photo_id: Number *
   }
 
-OUTPUT: `Status code 200` or `Error message`
+OUTPUT: Status code 200 or "Error message"
 ```
