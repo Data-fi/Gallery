@@ -8,7 +8,7 @@ import Carousel from './component/Carousel.jsx';
 class App extends React.Component {
     constructor(props) {
         super(props);
-        this.state = {
+        this.state ={
             index: 0,
             imageData: [],
             image: [],
@@ -23,7 +23,7 @@ class App extends React.Component {
         var parts = document.URL.split("/");
         var lastSegment = parts.pop() || parts.pop();
         
-        axios.get(`http://localhost:3001/${lastSegment}`)
+        axios.get(`/listing/:id/${lastSegment}`)
         .then(data => this.setState({
             imageData: data.data,
             image: data.data[0],
