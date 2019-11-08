@@ -1,4 +1,18 @@
-gallery=# select * from photos where photo_id=99990099;
+1) seeding time : 18.4534 minutes
+
+
+2)insert into photos (foreign_listing_id, photo_id, photourl,caption) values (9,101000000, 'http://lorempixel.com/640/480/city', 'Hi I am the new insert for testing');
+INSERT 0 1
+Time: 13.805 ms
+gallery=# select * from photos where photo_id=101000000;
+ photo_id  | foreign_listing_id |              photourl              |              caption
+-----------+--------------------+------------------------------------+------------------------------------
+ 101000000 |                  9 | http://lorempixel.com/640/480/city | Hi I am the new insert for testing
+(1 row)
+
+
+
+3) select * from photos where photo_id=99990099;
  photo_id | foreign_listing_id |              photourl              |                                                                           caption
 ----------+--------------------+------------------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------
  99990099 |            9999010 | http://lorempixel.com/640/480/city | Eius atque temporibus officia. Veniam voluptatem et at. Dignissimos quasi culpa quia omnis voluptatem sit suscipit. Et harum natus voluptate incidunt alias.
@@ -7,11 +21,7 @@ gallery=# select * from photos where photo_id=99990099;
 Time: 1.883 ms
 
 
-
-
-
-
-gallery=# select * from photos where photo_id > 99999909;
+4) select * from photos where photo_id > 99999909;
  photo_id  | foreign_listing_id |              photourl              |                                                                                                                                                                                   caption
 -----------+--------------------+------------------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
   99999910 |            9999991 | http://lorempixel.com/640/480/city | Molestiae cupiditate et incidunt at voluptatum. Consequatur fuga enim natus. Ut suscipit perspiciatis omnis sed quas.
