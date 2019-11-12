@@ -1,0 +1,52 @@
+import http from "k6/http";
+import { check } from 'k6';
+import { Rate } from 'k6/metrics';
+
+export let options =  { 
+  vus: 200, 
+  rps: 1200, 
+  duration: "5m"}
+
+export let getErrorRate = new Rate('Errors');
+
+export default function() {
+  let res = http.get(`http://localhost:3001/listing/${Math.floor(Math.random() * (10000000 - 1) + 1)}`);
+  check(res, {
+    '200': res => res.status === 200
+  }) || getErrorRate.add(1);
+}
+
+❯ k6 run getK6.js 
+
+          /\      |‾‾|  /‾‾/  /‾/   
+     /\  /  \     |  |_/  /  / /    
+    /  \/    \    |      |  /  ‾‾\  
+   /          \   |  |‾\  \ | (_) | 
+  / __________ \  |__|  \__\ \___/ .io
+
+  execution: local
+     output: -
+     script: getK6.js
+
+    duration: 5m0s, iterations: -
+         vus: 200,  max: 200
+
+    done [==========================================================] 5m0s / 5m0s
+
+    ✓ 200
+
+    checks.....................: 100.00% ✓ 234062 ✗ 0    
+    data_received..............: 756 MB  2.5 MB/s
+    data_sent..................: 22 MB   74 kB/s
+    http_req_blocked...........: avg=3.8µs    min=2µs      med=3µs      max=2.49ms p(90)=4µs      p(95)=5µs     
+    http_req_connecting........: avg=229ns    min=0s       med=0s       max=1.13ms p(90)=0s       p(95)=0s      
+    http_req_duration..........: avg=255.96ms min=98.33ms  med=231.96ms max=1.47s  p(90)=309.39ms p(95)=348.56ms
+    http_req_receiving.........: avg=75.19µs  min=37µs     med=71µs     max=2.64ms p(90)=96µs     p(95)=106µs   
+    http_req_sending...........: avg=15.95µs  min=9µs      med=14µs     max=785µs  p(90)=23µs     p(95)=27µs    
+    http_req_tls_handshaking...: avg=0s       min=0s       med=0s       max=0s     p(90)=0s       p(95)=0s      
+    http_req_waiting...........: avg=255.87ms min=97.68ms  med=231.87ms max=1.47s  p(90)=309.28ms p(95)=348.47ms
+    http_reqs..................: 234062  780.206434/s
+    iteration_duration.........: avg=256.22ms min=102.37ms med=232.15ms max=1.47s  p(90)=309.64ms p(95)=348.84ms
+    iterations.................: 234062  780.206434/s
+    vus........................: 200     min=200  max=200
+    vus_max....................: 200     min=200  max=200
