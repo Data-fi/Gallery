@@ -29,9 +29,10 @@
     "faker": "^4.1.0",
     "jest": "^24.9.0",
     "mongoose": "^5.7.4",
+    "newrelic": "^6.1.0",
     "nodemon": "^1.11.0",
     "path": "^0.12.7",
-    "postgresql": "0.0.1",
+    "pg": "^7.12.1",
     "react": "^15.4.2",
     "react-dom": "^15.4.2",
     "react-test-renderer": "^16.10.2"

@@ -5,6 +5,7 @@ import ImageGallery from './component/ImageGallery.jsx';
 import Carousel from './component/Carousel.jsx';
 
 
+
 class App extends React.Component {
     constructor(props) {
         super(props);
@@ -19,17 +20,26 @@ class App extends React.Component {
     componentDidMount() {
         this.fetchData();
     }
+
     fetchData() {
         var parts = document.URL.split("/");
         var lastSegment = parts.pop() || parts.pop();
-        
-        axios.get(`/listing/:id/${lastSegment}`)
-        .then(data => this.setState({
+        console.log(parts)
+        axios.get(`/listing/3`)
+        .then(data => {
+
+            console.log("this is data from client", data);
+            var photos = []
+            for (var i = 0; i < data.data.length; i++) {
+                photos.push(data.data[i])
+            }
+            this.setState({
             imageData: data.data,
-            image: data.data[0],
+            image: photos,
             dataLoaded: true,
             clickedPhoto: null
-        }) 
+        })}
+    
     )};
     prevImage() {
         const newIndex = this.state.index-1;
@@ -53,6 +63,7 @@ class App extends React.Component {
         console.log(event.target);
         event.preventDefault();
     }
+
     render() {
         if(this.state.dataLoaded) {
             if (!this.state.popUp) {
@@ -67,7 +78,7 @@ class App extends React.Component {
             );
         }
         else return (
-            <div>Fetching Data</div>
+            <div>Fetching Data (bundle is being reached but data not)</div>
         )
     }
 }
