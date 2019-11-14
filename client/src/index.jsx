@@ -22,12 +22,13 @@ class App extends React.Component {
     }
 
     fetchData() {
-        var parts = document.URL.split("/");
+        // console.log("document url", window.location.pathname)
+        // console.log(window.location)
+        var parts = window.location.pathname.split("/");
         var lastSegment = parts.pop() || parts.pop();
-        console.log(parts)
-        axios.get(`/listing/3`)
+        // console.log("parts from client", lastSegment)
+        axios.get('http://localhost:3001/currentListing', {params: {id: lastSegment}})
         .then(data => {
-
             console.log("this is data from client", data);
             var photos = []
             for (var i = 0; i < data.data.length; i++) {
@@ -40,7 +41,7 @@ class App extends React.Component {
             clickedPhoto: null
         })}
     
-    )};
+    ).catch(err => console.log("error from fetchData", err))};
     prevImage() {
         const newIndex = this.state.index-1;
         this.setState({

@@ -1,7 +1,8 @@
 const express = require('express');
 const newrelic = require("newrelic")
 const path = require('path');
-// const MongoPhoto = require("../database/MongooseConnection.js");
+var cors = require('cors')
+
 const postgresql= require ("../database/sqlConnection.js");
 
 
@@ -13,15 +14,14 @@ const app = express();
 //     res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
 //     next();
 // });
-
-
+app.use(cors())
 app.use('/', express.static(path.join(__dirname, '../public')));
+app.use('/listing/:id', express.static(path.join(__dirname, '../public')));
 app.use(express.json())
 
-app.get('/listing/:id', (req,res)=> {
-    console.log('hit gallery')
-    var id = req.params.id;
-    console.log(id)
+app.get('/currentListing', (req,res)=> {
+    console.log('hit gallery print out req from client', req.query.id)
+    var id = req.query.id;
     postgresql.getListing((err, dbObj)=> {
         if (err) {
             console.log('error from server.js SERVER********',err)
@@ -33,7 +33,9 @@ app.get('/listing/:id', (req,res)=> {
     }, id)
 }) //this just get the data for that specific listing and points it towards this endpoint. which you can print out http://localhost:3001/gallery/5
 
+
+
 app.listen(PORT, () => { 
-        console.log('Express is Listening on :', PORT)
+        console.log('Express is Listening on hi:', PORT)
     }
 );
