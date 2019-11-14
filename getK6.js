@@ -16,9 +16,4 @@ export default function() {
     '200': res => res.status === 200
   }) || getErrorRate.add(1);
 }
-// get 10 reqs / 100/ 1000
-// export default function () {
-//   for (var id = 1; id <= 1000; id++) {
-//     http.get(`http://localhost:3001/listing/${id}`)
-//   }
-// } 
+

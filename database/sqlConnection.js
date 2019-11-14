@@ -40,11 +40,3 @@ const getListing = (cb, id) =>{
 module.exports = {getListing:getListing}
 
 
-
-
-//   client = new Client({
-//     host: '/cloudsql/myproject:zone:mydb'
-//     username: 'username',
-//     password: 'password',
-//     database: 'database_name',
-// }); ubuntu
