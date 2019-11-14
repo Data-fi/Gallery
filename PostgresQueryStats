@@ -1,0 +1,73 @@
+1) seeding time : 18.4534 minutes
+
+
+2)insert into photos (foreign_listing_id, photo_id, photourl,caption) values (9,101000000, 'http://lorempixel.com/640/480/city', 'Hi I am the new insert for testing');
+INSERT 0 1
+Time: 13.805 ms
+gallery=# select * from photos where photo_id=101000000;
+ photo_id  | foreign_listing_id |              photourl              |              caption
+-----------+--------------------+------------------------------------+------------------------------------
+ 101000000 |                  9 | http://lorempixel.com/640/480/city | Hi I am the new insert for testing
+(1 row)
+
+
+
+3) select * from photos where photo_id=99990099;
+ photo_id | foreign_listing_id |              photourl              |                                                                           caption
+----------+--------------------+------------------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------
+ 99990099 |            9999010 | http://lorempixel.com/640/480/city | Eius atque temporibus officia. Veniam voluptatem et at. Dignissimos quasi culpa quia omnis voluptatem sit suscipit. Et harum natus voluptate incidunt alias.
+(1 row)
+
+Time: 1.883 ms
+
+
+4) select * from photos where photo_id > 99999909;
+ photo_id  | foreign_listing_id |              photourl              |                                                                                                                                                                                   caption
+-----------+--------------------+------------------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+  99999910 |            9999991 | http://lorempixel.com/640/480/city | Molestiae cupiditate et incidunt at voluptatum. Consequatur fuga enim natus. Ut suscipit perspiciatis omnis sed quas.
+  99999911 |            9999992 | http://lorempixel.com/640/480/city | Sequi nostrum qui aliquid totam sit accusantium est nostrum. Voluptas dolor quas. Reiciendis facere veritatis voluptatem quis necessitatibus.
+  99999912 |            9999992 | http://lorempixel.com/640/480/city | Molestiae minima labore corporis. Fuga aliquam aperiam et perferendis maxime quo doloremque ut. Assumenda officia totam modi officia assumenda aut. Iure error autem qui quo asperiores.
+  99999913 |            9999992 | http://lorempixel.com/640/480/city | Ratione cumque molestias. Nesciunt ut et eum. Molestias consequatur praesentium debitis accusantium. Iure sequi mollitia placeat pariatur id voluptatem. Enim dolorem labore.
+  99999914 |            9999992 | http://lorempixel.com/640/480/city | Reprehenderit sint sint voluptas necessitatibus. Harum illum tempore dolor in aut laborum quidem ea. Veniam odio esse et autem odit.
+  99999915 |            9999992 | http://lorempixel.com/640/480/city | Eius non beatae rerum debitis quasi. Inventore illo esse sint. Vitae molestiae dolor recusandae sit. Veniam voluptatem ducimus sint aut et.
+  99999916 |            9999992 | http://lorempixel.com/640/480/city | Et laboriosam vel deserunt delectus omnis. Iste qui repellat doloribus unde ipsum deleniti adipisci labore. Consequuntur eum quos voluptatibus qui.
+  99999917 |            9999992 | http://lorempixel.com/640/480/city | Ut aut aut est occaecati. Consectetur sed eaque consequatur velit enim rerum totam. Dolores nisi quod. Quia nemo vitae nihil ex molestiae.
+  99999918 |            9999992 | http://lorempixel.com/640/480/city | Quos laudantium beatae. Quod dolor consequatur veniam minus nisi est. Maiores aliquam a voluptatem asperiores voluptatum eos incidunt.
+  99999919 |            9999992 | http://lorempixel.com/640/480/city | Non temporibus quia natus magni commodi at. Tempora eaque soluta aut delectus vel ad quis et consequatur. Est libero accusamus aut expedita similique. Quia quia quidem quas asperiores eum aut quibusdam odio alias. Doloribus sequi quasi quasi culpa.
+  99999920 |            9999992 | http://lorempixel.com/640/480/city | Praesentium similique qui tempora molestiae. Placeat odit autem quaerat quibusdam doloremque iure labore quam. Laborum sit harum et et odio optio similique dolor. Iure cupiditate officiis dolores reprehenderit quo qui ut. Delectus culpa nisi. Repellendus sunt non recusandae dolores dolore sunt non eos.
+  99999921 |            9999993 | http://lorempixel.com/640/480/city | Ipsam ipsum omnis illo aliquid labore dolore consectetur. In esse quia vel nisi quod dolorem. Praesentium minima architecto nisi eum rerum aut. Pariatur neque iusto tempore deserunt.
+  99999922 |            9999993 | http://lorempixel.com/640/480/city | Est voluptatum consequuntur ab nemo provident et explicabo consequuntur. Laborum vitae officia repellendus eos rerum. Et voluptas sed numquam.
+  99999923 |            9999993 | http://lorempixel.com/640/480/city | Aut rerum repudiandae quod provident voluptas vitae maiores et sed. Dolorem facilis dolore ipsa quibusdam rerum dolorem. Et eligendi dolor mollitia iste cupiditate aut distinctio et. Totam hic reiciendis. Dignissimos voluptatum nulla quo facere fuga.
+  99999924 |            9999993 | http://lorempixel.com/640/480/city | Quos beatae eligendi labore atque maiores molestias et ut. Sint qui occaecati et non modi velit. Tempora quaerat modi ea officiis soluta dolorem in et. Necessitatibus mollitia alias non incidunt sit aut sint.
+  99999925 |            9999993 | http://lorempixel.com/640/480/city | Ducimus laudantium nihil aspernatur reiciendis. Et totam rem incidunt dolorem sit quod. A eveniet quia minima. In unde ut odio nulla.
+  99999926 |            9999993 | http://lorempixel.com/640/480/city | Voluptas autem ut quaerat qui rerum. Possimus repellendus velit perferendis ut nobis velit. Aut qui officiis perferendis molestiae laboriosam. Consectetur quo quia rerum nisi delectus magni culpa amet aliquam.
+  99999927 |            9999993 | http://lorempixel.com/640/480/city | Corporis rerum id eum. Quae nihil at voluptatum dolores ut rerum.
+  99999928 |            9999993 | http://lorempixel.com/640/480/city | Non velit ut et ea blanditiis quia in cupiditate quam. Cumque quaerat sint. Temporibus qui quia enim sint iure voluptatem delectus fugit.
+  99999929 |            9999993 | http://lorempixel.com/640/480/city | Qui assumenda sunt sapiente. Qui iste aspernatur sit blanditiis ut eius qui quia. Aspernatur aut tenetur a magni et voluptatibus non vitae. Vel voluptatum commodi. Aliquid vel atque culpa.
+  99999930 |            9999993 | http://lorempixel.com/640/480/city | Soluta illo et quod autem autem. Ut dignissimos ea at earum praesentium repellendus reiciendis qui dolor. Eius quidem dicta nulla quia officiis dignissimos. Laudantium quis quas perspiciatis sunt libero iste eum id. Et harum iste vel consequuntur consequatur aut accusantium ut. Quasi quos voluptas et omnis ab nesciunt velit sit.
+  99999931 |            9999994 | http://lorempixel.com/640/480/city | Ex maxime laboriosam est. Error cum qui fugit quia sit quaerat consectetur quia omnis.
+  99999932 |            9999994 | http://lorempixel.com/640/480/city | Nihil et nulla quis quam. Voluptatum blanditiis ab tempora. Rem repellendus dolorem. Accusamus et eos perspiciatis quos illum assumenda delectus et. Eos quod quasi.
+  99999933 |            9999994 | http://lorempixel.com/640/480/city | Reprehenderit cupiditate porro. Quo dicta sed reiciendis ratione maxime est sit nam in. At et voluptates ea est. Doloremque laudantium quo ipsum dolor et. Libero enim quas quae incidunt.
+  99999934 |            9999994 | http://lorempixel.com/640/480/city | Et perspiciatis molestiae. A provident quidem veniam sit incidunt eum porro. Harum placeat aut deleniti molestias enim. Impedit quia eos nulla et illo architecto nam qui. Voluptatem voluptatem sit distinctio iste soluta ipsam eum omnis ea. Facere voluptatem velit ut quis voluptates laboriosam.
+  99999935 |            9999994 | http://lorempixel.com/640/480/city | Molestias aut molestiae eos facere quo reiciendis sit. Facilis porro optio unde veritatis at in nam incidunt occaecati.
+  99999936 |            9999994 | http://lorempixel.com/640/480/city | Deleniti est nam sequi repellendus quia impedit ad. Unde perspiciatis aliquam quis suscipit velit soluta dolorem veritatis. Consequatur aliquid libero et et quisquam minima. Et ut itaque quae. Et maiores et quis voluptas non eos et.
+  99999937 |            9999994 | http://lorempixel.com/640/480/city | Repellendus itaque iusto dolore. Temporibus qui et dolores pariatur fugit ratione. Iusto tempora cum architecto sit sapiente sapiente aut qui. Quia quo aut expedita molestiae ut est totam est. Beatae illo explicabo non ea dolor dolorum sint quae.
+  99999938 |            9999994 | http://lorempixel.com/640/480/city | Fugiat expedita itaque quia. Ut ut porro nostrum eos harum qui vero officia. Quis aut itaque dolores et dolore sed necessitatibus sed quaerat. Adipisci amet vero sint. Cupiditate placeat optio dolores quia recusandae nihil reprehenderit nisi facere. Rerum neque voluptates blanditiis.
+  99999939 |            9999994 | http://lorempixel.com/640/480/city | Perferendis quaerat dolores rerum ea. Libero illum nam aut molestiae.
+  99999940 |            9999994 | http://lorempixel.com/640/480/city | Culpa deserunt dolores totam commodi et qui laudantium. Illum officiis vel natus blanditiis repudiandae iure ducimus vel. Nihil sint animi explicabo. Et cupiditate optio et quaerat ab quisquam.
+  99999941 |            9999995 | http://lorempixel.com/640/480/city | Velit eum totam. Molestias at molestias totam voluptatibus omnis unde. Voluptate illo aspernatur laudantium et quia. Sit similique repudiandae labore in nisi. Rerum quidem et et et sunt tempore suscipit perferendis.
+  99999942 |            9999995 | http://lorempixel.com/640/480/city | Consectetur aut deserunt debitis iure excepturi cumque amet. Nihil nesciunt magni eaque voluptatibus voluptate nesciunt totam. Totam dolores tempora velit fuga. Et eligendi voluptatum nesciunt voluptatum natus. Possimus magnam et est fugit impedit. Recusandae dolore unde adipisci incidunt voluptatem facere dolor.
+  99999943 |            9999995 | http://lorempixel.com/640/480/city | Et quibusdam fugiat ex omnis exercitationem. Quia est animi eos aut et molestiae excepturi iusto. Quos dolore nam enim quo. Voluptas laborum autem illum facilis explicabo repellendus. Blanditiis vitae sit corporis.
+  99999944 |            9999995 | http://lorempixel.com/640/480/city | Neque qui repellat repellat pariatur perspiciatis cum tempore explicabo. Ducimus quas eius possimus quas ad. Eum repudiandae omnis maiores est. Omnis a optio qui quam delectus reiciendis qui ut esse.
+  99999945 |            9999995 | http://lorempixel.com/640/480/city | Cumque dolor rem est sunt architecto itaque doloribus est. Eligendi error reprehenderit autem odit suscipit. Fugiat velit cum distinctio id laborum laborum amet facere. Corporis nisi in expedita sit doloremque dolores harum optio.
+  99999946 |            9999995 | http://lorempixel.com/640/480/city | Sunt qui ipsam non quis assumenda molestiae nihil veniam cum. Optio nisi cupiditate sint est. Veniam reiciendis tenetur et similique soluta corrupti. Sit impedit pariatur molestiae aut veniam culpa nisi. Occaecati quo rerum animi enim ab.
+  99999947 |            9999995 | http://lorempixel.com/640/480/city | Quidem qui ut saepe non quam laudantium ea suscipit. Officiis omnis laborum voluptatem. Rerum nisi nemo vero modi qui perspiciatis ullam laudantium quia. Ea suscipit fuga dolor magni voluptatum est. Error dignissimos sit dolor voluptate sit aut et. Corporis sint quis iusto earum rem voluptates rerum sed.
+  99999948 |            9999995 | http://lorempixel.com/640/480/city | Facere sequi magnam incidunt maxime fugiat ipsa sequi minus et. Hic iste cum pariatur non. Officiis aut laborum. Aut iusto incidunt voluptatem voluptatem. Id aliquid natus. Tenetur quas et repellat.
+  99999949 |            9999995 | http://lorempixel.com/640/480/city | Non tenetur laborum laborum. Accusamus unde ut id quis est quo. Distinctio ab sunt dolorem dicta. Sed perspiciatis velit id. Atque quam sit ducimus illo reprehenderit maxime error est. Illum magnam labore.
+  99999950 |            9999995 | http://lorempixel.com/640/480/city | Voluptas est a inventore veniam. Consequatur explicabo ut ex. Sed non maxime officia doloribus et facere aspernatur ea.
+  99999951 |            9999996 | http://lorempixel.com/640/480/city | Ut in quaerat et consectetur. Sed blanditiis officia. Molestias ad perferendis possimus.
+  99999952 |            9999996 | http://lorempixel.com/640/480/city | Inventore delectus sed quisquam distinctio repudiandae quam voluptatem molestiae aliquid. Sit sequi accusamus quaerat eos. Sequi qui reprehenderit rerum. Sit ea rerum autem et nulla.
+  99999953 |            9999996 | http://lorempixel.com/640/480/city | Deleniti id aspernatur aut non ut qui. Atque voluptatum itaque consequuntur maxime voluptatem amet maiores.
+  99999954 |            9999996 | http://lorempixel.com/640/480/city | Commodi deleniti dolorum aspernatur illo itaque id deserunt autem culpa. Eius qui et corporis culpa aut dolore et omnis. Cumque eius maiores est ipsa ab ipsam consequatur fugiat consequatur.
+  99999955 |            9999996 | http://lorempixel.com/640/480/city | Officiis et quaerat commodi illum dolor at fugiat perspiciatis nostrum. Voluptate necessitatibus quia eligendi maiores blanditiis reiciendis.
+Time: 4.825 ms

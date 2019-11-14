@@ -1,0 +1,119 @@
+1)  data generation: 8.11 minutes
+    seeding time: 9:0065 minutes
+
+
+2) insert	listingGallery.listings 8ms Fri Nov 08 2019 19:05:26
+command:{
+	"insert" : "listings",
+	"ordered" : true,
+	"lsid" : {
+		"id" : UUID("e2da32f9-1863-43d8-b341-a0ecec8a9195")
+	},
+	"$db" : "listingGallery"
+} ninserted:1 keysInserted:2 numYield:0 locks:.....
+
+
+
+
+3) > db.listings.find({listing_id: 9099099}).explain('executionStats')
+{
+	"queryPlanner" : {
+		"plannerVersion" : 1,
+		"namespace" : "listingGallery.listings",
+		"indexFilterSet" : false,
+		"parsedQuery" : {
+			"listing_id" : {
+				"$eq" : 9099099
+			}
+		},
+		"queryHash" : "CBBD0FF1",
+		"planCacheKey" : "DA698440",
+		"winningPlan" : {
+			"stage" : "FETCH",
+			"inputStage" : {
+				"stage" : "IXSCAN",
+				"keyPattern" : {
+					"listing_id" : 1
+				},
+				"indexName" : "listing_id_1",
+				"isMultiKey" : false,
+				"multiKeyPaths" : {
+					"listing_id" : [ ]
+				},
+				"isUnique" : false,
+				"isSparse" : false,
+				"isPartial" : false,
+				"indexVersion" : 2,
+				"direction" : "forward",
+				"indexBounds" : {
+					"listing_id" : [
+						"[9099099.0, 9099099.0]"
+					]
+				}
+			}
+		},
+		"rejectedPlans" : [ ]
+	},
+	"executionStats" : {
+		"executionSuccess" : true,
+		"nReturned" : 1,
+		"executionTimeMillis" : 2,
+		"totalKeysExamined" : 1,
+		"totalDocsExamined" : 1,
+		"executionStages" : {
+			"stage" : "FETCH",
+			"nReturned" : 1,
+			"executionTimeMillisEstimate" : 38,
+			"works" : 2,
+			"advanced" : 1,
+			"needTime" : 0,
+			"needYield" : 0,
+			"saveState" : 0,
+			"restoreState" : 0,
+			"isEOF" : 1,
+			"docsExamined" : 1,
+			"alreadyHasObj" : 0,
+			"inputStage" : {
+				"stage" : "IXSCAN",
+				"nReturned" : 1,
+				"executionTimeMillisEstimate" : 38,
+				"works" : 2,
+				"advanced" : 1,
+				"needTime" : 0,
+				"needYield" : 0,
+				"saveState" : 0,
+				"restoreState" : 0,
+				"isEOF" : 1,
+				"keyPattern" : {
+					"listing_id" : 1
+				},
+				"indexName" : "listing_id_1",
+				"isMultiKey" : false,
+				"multiKeyPaths" : {
+					"listing_id" : [ ]
+				},
+				"isUnique" : false,
+				"isSparse" : false,
+				"isPartial" : false,
+				"indexVersion" : 2,
+				"direction" : "forward",
+				"indexBounds" : {
+					"listing_id" : [
+						"[9099099.0, 9099099.0]"
+					]
+				},
+				"keysExamined" : 1,
+				"seeks" : 1,
+				"dupsTested" : 0,
+				"dupsDropped" : 0
+			}
+		}
+	},
+	"serverInfo" : {
+		"host" : "MacBook-Pro.local",
+		"port" : 27017,
+		"version" : "4.2.0",
+		"gitVersion" : "a4b751dcf51dd249c5865812b390cfd1c0129c30"
+	},
+	"ok" : 1
+}
