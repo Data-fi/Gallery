@@ -5,10 +5,10 @@ var pg = require("pg");
 // var connectionString = cs
 
 var client = new pg.Client({
-  user: 'dbacai99',
+  user: 'dbacai99', //postgres
   host: 'localhost',
   database: 'gallery',
-  password:''
+  password:'' //pw
  //same pport as server?
 }); //creating connection //set of procedures that you're opening to use with node to interact with postgres
 client.connect((err)=>{
@@ -27,10 +27,10 @@ const getListing = (cb, id) =>{
   client.query((`SELECT * from photos where foreign_listing_id= ${id}`), (err, res) => {
     if (err) {
       console.log('ERROR from getQuery in db connection', err.stack)
-      return err.stack
+      cb(err.stack,null)
     } else {
       // console.log(res)
-      cb(err,res.rows); //must invoke with err bc you have two params
+      cb(null,res.rows); //must invoke with err bc you have two params
       
     }
   })

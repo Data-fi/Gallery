@@ -18,9 +18,9 @@ CREATE TABLE photos (
     --   REFERENCES listings (listing_id) 
     --     ON DELETE CASCADE
 );
-COPY Listings (listing_id) FROM '/Users/dbacai99/sr-projects/SDC/Gallery/database/generated_data/sqlListings.csv' DELIMITERS ',' HEADER CSV;
+COPY Listings (listing_id) FROM '/Users/dbacai99/sr-projects/SDC/sqlListings.csv' DELIMITERS ',' HEADER CSV;
 
-COPY Photos (photo_id, foreign_listing_id, photoUrl, caption) FROM '/Users/dbacai99/sr-projects/SDC/Gallery/database/generated_data/sqlPhotos1.csv' DELIMITERS ',' HEADER CSV;
+COPY Photos (photo_id, foreign_listing_id, photoUrl, caption) FROM '/Users/dbacai99/sr-projects/SDC/sqlPhotos1.csv' DELIMITERS ',' HEADER CSV;
 
 -- COPY Photos (photo_id, photoUrl, caption) FROM '/Users/dbacai99/sr-projects/SDC/Gallery/database/generated_data/sqlPhotos2.csv' DELIMITERS ',' HEADER CSV;
 
