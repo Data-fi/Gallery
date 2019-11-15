@@ -27,7 +27,7 @@ class App extends React.Component {
         var parts = window.location.pathname.split("/");
         var lastSegment = parts.pop() || parts.pop();
         // console.log("parts from client", lastSegment)
-        axios.get('http://localhost:3001/currentListing', {params: {id: lastSegment}})
+        axios.get('http://54.193.64.206:80/currentListing', {params: {id: lastSegment}})
         .then(data => {
             console.log("this is data from client", data);
             var photos = []

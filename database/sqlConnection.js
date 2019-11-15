@@ -5,7 +5,7 @@ var pg = require("pg");
 // var connectionString = cs
 
 var client = new pg.Client({
-  user: 'dbacai99', //postgres
+  user: 'postgress', //postgres
   host: 'localhost',
   database: 'gallery',
   password:'' //pw
