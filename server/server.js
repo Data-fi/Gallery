@@ -20,14 +20,14 @@ app.use('/listing/:id', express.static(path.join(__dirname, '../public')));
 app.use(express.json())
 
 app.get('/currentListing', (req,res)=> {
-    console.log('hit gallery print out req from client', req.query.id)
+    // console.log('hit gallery print out req from client', req.query.id)
     var id = req.query.id;
     postgresql.getListing((err, dbObj)=> {
         if (err) {
             console.log('error from server.js SERVER********',err)
             res.status(400).send(err)
         } else {
-            console.log ('Server received data from database', dbObj)
+            console.log ('req received', dbObj)
             res.status(200).send(dbObj)
         }
     }, id)
