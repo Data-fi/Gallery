@@ -1,5 +1,5 @@
-const express = require('express');
 const newrelic = require("newrelic")
+const express = require('express');
 const path = require('path');
 var cors = require('cors')
 
@@ -27,7 +27,7 @@ app.get('/currentListing', (req,res)=> {
             console.log('error from server.js SERVER********',err)
             res.status(400).send(err)
         } else {
-            console.log ('req received', dbObj)
+            console.log ('req/db received on server ')
             res.status(200).send(dbObj)
         }
     }, id)
