@@ -3,7 +3,8 @@ var pg = require("pg");
 
 var client = new pg.Client({
   host: 'localhost',
-  user: 'dbacai99', //postgres
+  // user: 'dbacai99', 
+  user:'postgres',
   database: 'gallery',
   password:'password' //pw
  //same pport as server?
