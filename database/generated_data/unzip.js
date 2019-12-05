@@ -20,8 +20,10 @@ const unzipper = function(inpPath, outPath, callback) {
       out.destroy();
       callback();
     })
+
 };
 
 unzipper('sqlListings.csv.gz', 'sqlListings.csv', () => {
   unzipper('sqlPhotos1.csv.gz', 'sqlPhotos1.csv', () => {});
 });
+//
