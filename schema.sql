@@ -20,23 +20,4 @@ CREATE TABLE photos (
 );
 COPY Listings (listing_id) FROM '/Users/dbacai99/sr-projects/SDC/sqlListings.csv' DELIMITERS ',' HEADER CSV;
 
-COPY Photos (photo_id, foreign_listing_id, photoUrl, caption) FROM '/Users/dbacai99/sr-projects/SDC/sqlPhotos1.csv' DELIMITERS ',' HEADER CSV;
-
--- COPY Photos (photo_id, photoUrl, caption) FROM '/Users/dbacai99/sr-projects/SDC/Gallery/database/generated_data/sqlPhotos2.csv' DELIMITERS ',' HEADER CSV;
-
--- COPY Photos (photo_id, photoUrl, caption) FROM '/Users/dbacai99/sr-projects/SDC/Gallery/database/generated_data/sqlPhotos3.csv' DELIMITERS ',' HEADER CSV;
-
--- COPY Photos (photo_id, photoUrl, caption) FROM '/Users/dbacai99/sr-projects/SDC/Gallery/database/generated_data/sqlPhotos4.csv' DELIMITERS ',' HEADER CSV;
-
--- COPY Photos (photo_id, photoUrl, caption) FROM '/Users/dbacai99/sr-projects/SDC/Gallery/database/generated_data/sqlPhotos5.csv' DELIMITERS ',' HEADER CSV;
-
--- COPY Photos (photo_id, photoUrl, caption) FROM '/Users/dbacai99/sr-projects/SDC/Gallery/database/generated_data/sqlPhotos6.csv' DELIMITERS ',' HEADER CSV;
-
--- COPY Photos (photo_id, photoUrl, caption) FROM '/Users/dbacai99/sr-projects/SDC/Gallery/database/generated_data/sqlPhotos7.csv' DELIMITERS ',' HEADER CSV;
-
--- COPY Photos (photo_id, photoUrl, caption) FROM '/Users/dbacai99/sr-projects/SDC/Gallery/database/generated_data/sqlPhotos8.csv' DELIMITERS ',' HEADER CSV;
-
--- COPY Photos (photo_id, photoUrl, caption) FROM '/Users/dbacai99/sr-projects/SDC/Gallery/database/generated_data/sqlPhotos9.csv' DELIMITERS ',' HEADER CSV;
-
--- COPY Photos (photo_id, photoUrl, caption) FROM '/Users/dbacai99/sr-projects/SDC/Gallery/database/generated_data/sqlPhotos10.csv' DELIMITERS ',' HEADER CSV;
--- -- foreign_listing_id
+COPY Photos (photo_id, foreign_listing_id, photoUrl, caption) FROM '/Users/dbacai99/sr-projects/SDC/Gallery/database/generated_data/blah/sqlPhotos1.csv' DELIMITERS ',' HEADER CSV;
