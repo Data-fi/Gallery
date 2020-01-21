@@ -22,8 +22,6 @@ class App extends React.Component {
     }
 
     fetchData() {
-        // console.log("document url", window.location.pathname)
-        // console.log(window.location)
         var parts = window.location.pathname.split("/");
         console.log('parts', parts)
         var lastSegment = parts.pop() || parts.pop();
