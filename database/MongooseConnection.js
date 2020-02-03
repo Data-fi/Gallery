@@ -1,6 +1,5 @@
 const mongoose = require('mongoose');
 
-// mongoose.connect('mongodb://localhost/photos');
 mongoose.connect('mongodb://localhost/Gallery');
 
 const db = mongoose.connection;
@@ -28,19 +27,6 @@ var listingSchema = new mongoose.Schema ({
 
 
 var Listing = mongoose.model('Listing', listingSchema);
-
-// var photoSchema = new mongoose.Schema ({
-//     photo_id: {
-//     type: Number,
-//     required: true
-//   },
-//     photoUrl: {
-//     type: String,
-//     required: true 
-//   },
-//     caption: String 
-// })
-// var Photo = mongoose.model('Photo', photoSchema);
 
 
 
