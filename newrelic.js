@@ -1,3 +1,4 @@
+import newrelicKey from 'newrelic.js';
 'use strict'
 /**
  * New Relic agent configuration.
@@ -13,7 +14,7 @@ exports.config = {
   /**
    * Your New Relic license key.
    */
-  license_key: '8c474efb8e5b3baf3e9fa485a1f62882c1ce43c9',
+  license_key: newrelicKey,
   logging: {
     /**
      * Level at which to log. 'trace' is most useful to New Relic when diagnosing
